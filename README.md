@@ -22,8 +22,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone <repository-url>
-   cd VoyagerAutoBot-NTE
+   git clone https://github.com/jessdy/VOYAGER-BOT-JAD.git
+   cd VOYAGER-BOT-JAD
    ```
 
 2. **安装依赖**
