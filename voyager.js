@@ -666,7 +666,7 @@ async function runCycle() {
 
 async function run() {
   const terminalWidth = process.stdout.columns || 80;
-  cfonts.say('NT EXHAUST', {
+  cfonts.say('OxJessdy', {
     font: 'block',
     align: 'center',
     colors: ['cyan', 'magenta'],
@@ -675,7 +675,7 @@ async function run() {
     lineHeight: 1,
     space: true
   });
-  console.log(gradient.retro(centerText('=== Telegram Channel 🚀 : NT Exhaust (@NTExhaust) ===', terminalWidth)));
+  console.log(gradient.retro(centerText('=== Telegram  🚀 : 0xJessdy (@jessdy2) ===', terminalWidth)));
   console.log(gradient.retro(centerText('✪ VOYAGER AUTO DAILY TASK & OPEN CHEST ✪', terminalWidth)));
   console.log('\n');
   await initializeConfig();
