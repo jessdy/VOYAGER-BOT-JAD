@@ -619,17 +619,12 @@ let globalUseProxy = false;
 let globalProxies = [];
 
 async function initializeConfig() {
-  const useProxyAns = await askQuestion(chalk.cyanBright('🔌 Do You Want to Use Proxy? (y/n): '));
-  if (useProxyAns.trim().toLowerCase() === 'y') {
-    globalUseProxy = true;
+  globalUseProxy = true;
     globalProxies = await readProxies();
     if (globalProxies.length === 0) {
       globalUseProxy = false;
       logger.warn('No proxies available, proceeding without proxy.', { emoji: '⚠️ ' });
     }
-  } else {
-    logger.info('Proceeding without proxy.', { emoji: 'ℹ️ ' });
-  }
 }
 
 async function askQuestion(query) {
@@ -682,7 +677,6 @@ async function run() {
 
   while (true) {
     await runCycle();
-    console.log();
     logger.info(chalk.bold.yellowBright('Cycle completed. Waiting 24 hours...'), { emoji: '🔄 ' });
     await delay(86400);
   }
